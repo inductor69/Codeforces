@@ -979,19 +979,28 @@ void _debug_print_time(const char *prefix)
            prefix, tm->tm_hour, tm->tm_min, tm->tm_sec, tv.tv_usec);
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#include <iostream>
+#include <bits/stdc++.h>
+#define pb push_back
+#define s(a, x, y) sort(a.begin()+x, a.begin()+y);
+#define mp make_pair
+#define F first
+#define S second
+#define ll long long
 using namespace std;
- 
+ll t, n;
+string b, a;
 int main() {
-	long t,n,m;
 	cin>>t;
 	while(t--){
-		cin>>n>>m;
-		n*=m;
-		if(n%2){
-			n++;
+		cin>>b;
+		a.clear();
+		n=b.size();
+		for(int i=0; i<n; i++){
+			if(i%2==0) a.pb(b[i]);
 		}
-		cout<<n/2<<endl;
+		a.pb(b[n-1]);
+		cout<<a<<endl;
 	}
+	return 0;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
